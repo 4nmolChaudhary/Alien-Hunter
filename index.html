@@ -9,10 +9,20 @@
 </head>
 
 <body>
+
     <div class="game">
-        <div class="scoreboard">
-            0
+        <div class="details">
+            <div class="highscore">
+                Highscore : 0
+            </div>
+            <div class="time-bar">
+                Time Left : 30s
+            </div>
+            <div class="scoreboard">
+                Score : 0
+            </div>
         </div>
+
         <div class="row">
             <div class="ufo ufo1">
                 <div class="alien"></div>
@@ -35,65 +45,9 @@
                 <div class="alien"></div>
             </div>
         </div>
-        <button onclick="startGame()">Play</button>
+        <button onclick="startGame()"></button>
     </div>
-    <!-- <div class="cursor">
-        <img src="assets/images/taget-cursor.png" alt="mallet" height="128px" width="128px">
-    </div> -->
-
-
 </body>
 <script src="main.js"></script>
-<script>
-    const ufos = document.querySelectorAll('.ufo');
-    const aliens = document.querySelectorAll('.alien');
-    const scoreboard = document.querySelector('.scoreboard');
-    let lastUfo;
-    let timeUp = false;
-    let aim = false;
-    let score;
-    const randomTime = (min, max) => {
-        return Math.round(Math.random() * (max - min) + min);
-    }
-
-    const randomUfo = (ufos) => {
-        const ind = Math.floor(Math.random() * ufos.length);
-        const ufo = ufos[ind];
-        if (ufo === lastUfo) {
-            return randomUfo(ufos);
-        }
-        lastUfo = ufo;
-        return ufo;
-    }
-
-    const peep = () => {
-        const time = randomTime(200, 2000);
-        const ufo = randomUfo(ufos);
-        ufo.classList.add('up');
-        setTimeout(() => {
-            ufo.classList.remove('up');
-            if (!timeUp) peep()
-        }, time)
-    }
-
-    startGame = () => {
-        scoreboard.textContent = 0;
-        timeUp = false;
-        score = 0;
-        peep();
-        setTimeout(() => {
-            timeUp = true;
-            aim = false;
-        }, 30000);
-    }
-
-    function bonk(e) {
-        if (!e.isTrusted) return;
-        score++;
-        scoreboard.textContent = score;
-    }
-
-    aliens.forEach(alien => alien.addEventListener('click', e => bonk(e)));
-</script>
 
 </html>

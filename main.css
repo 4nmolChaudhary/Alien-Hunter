@@ -3,8 +3,7 @@
     src:url('assets/fonts/RifficFree-Bold.ttf');
 }
 
-body,
-.game {
+body,.game{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +11,7 @@ body,
     overflow: hidden;
     background: url('assets/images/space-bg.jpeg');
     background-size: cover;
-    cursor: none,auto;
+    cursor: crosschair;
 }
 .game{
     display: flex;
@@ -40,7 +39,7 @@ body,
     top:0;
     display: block;
 } 
-.row{
+.row,.details{
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -48,12 +47,23 @@ body,
     align-items: center;
     margin-bottom: 50px;
 }
-.scoreboard{
-    font-family: 'RifficFree-Bold';
-    font-size: 60px;
-    color: #fff;
-    position: absolute;
-    top:0;
-    right: 0;
-    padding: 20px 50px;
+.details{
+    font-size: 35px;
+    font-family:'RifficFree-Bold' ;
+    color:#fff;
+    width: 90%;
+}
+button{
+    background: url('assets/images/button.png');
+    background-size: 142px 70px;
+    width: 142px;
+    height: 70px;
+    border: none;
+    outline: none;
+}
+.time-bar{
+    text-align: center;
+    font-size: 35px;
+    font-family:'RifficFree-Bold' ;
+    color:#fff;
 }
