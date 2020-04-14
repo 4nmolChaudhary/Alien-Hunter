@@ -1,4 +1,5 @@
 # Alien-Hunter
+
 ## Alien Hunter : A JavaScript Game
 ![alien](assets/images/Alien.png)
 
