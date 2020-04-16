@@ -3,4 +3,4 @@
 ## Alien Hunter : A JavaScript Game
 ![alien](assets/images/Alien.png)
 
-[Click here to play](https://4nmolchaudhary.github.io/Alien-Hunter/)
+[Click here to play the game](https://4nmolchaudhary.github.io/Alien-Hunter/)
